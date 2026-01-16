@@ -47,10 +47,22 @@ header{
   border-color:var(--accent);
 }
 
-h1{
-  font-family:'Playfair Display',serif;
-  font-size:52px;
-  letter-spacing:.5px;
+/* TITULLI I HEADER */
+.logo {
+  width: 250px;          /* logo më e madhe për desktop */
+  max-width: 80%;        /* përshtatet në mobile */
+  display: block;
+  margin: 0 auto 20px;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;   /* font i bukur */
+  font-size: 52px;                           /* madhësia */
+  letter-spacing: .5px;
+  color: var(--text-main);
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
 }
 
 header h2{
@@ -180,3 +192,17 @@ button:hover{
   transform:translateY(-2px);
   box-shadow:0 15px 40px rgba(96,165,250,.45);
 }
+
+/* MEDIA QUERIES PËR MOBILE */
+@media (max-width: 600px) {
+  .logo {
+    width: 180px;
+  }
+  header h1 {
+    font-size: 36px;
+  }
+  header h2 {
+    font-size: 22px;
+  }
+}
+

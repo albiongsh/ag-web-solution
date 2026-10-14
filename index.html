@@ -1,98 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>AG Web Solutions | Albion Gashi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050c17"><meta name="description" content="AG Web Solutions — modern websites, web applications, automation and digital experiences."><title>AG Web Solutions | Digital Experiences</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head>
 <body>
-
-<header class="fade">
-  <div class="lang-switch">
-    <button onclick="setLang('en')">EN</button>
-    <button onclick="setLang('sq')">SHQ</button>
-  </div>
-
-  <!-- LOGO -->
-  <img
-    src="assets/logodef1.png"
-    alt="AG Web Solutions Logo"
-    class="logo"
-  >
-
-  <!-- TITULLI -->
-  <h1>AG Web Solutions</h1>
-  <h2 id="subtitle">Smart Web & Automation Solutions</h2>
-
-  <p id="desc">
-    Premium websites and smart automation solutions crafted for modern businesses
-    that value performance, clarity and professional presence.
-  </p>
-</header>
-
-<section class="fade">
-  <h2 id="servicesTitle">Services</h2>
-  <div class="services">
-    <div class="card">
-      <h3 id="s1t">Business Websites</h3>
-      <p id="s1d">High-end websites built for credibility and growth.</p>
-    </div>
-    <div class="card">
-      <h3 id="s2t">Personal Websites & Portfolio</h3>
-      <p id="s2d">Minimal and powerful personal branding.</p>
-    </div>
-    <div class="card">
-      <h3 id="s3t">Website Maintenance</h3>
-      <p id="s3d">Security, updates and long-term support.</p>
-    </div>
-    <div class="card">
-      <h3 id="s4t">Python Automation</h3>
-      <p id="s4d">Smart automation to eliminate repetitive work.</p>
-    </div>
-    <div class="card">
-      <h3 id="s5t">Landing Pages</h3>
-      <p id="s5d">Conversion-focused marketing pages.</p>
-    </div>
-  </div>
-</section>
-
-<section class="fade">
-  <h2 id="aboutTitle">About Me</h2>
-  <div class="card">
-    <p id="aboutText">
-      I’m Albion Gashi, a web developer specialized in modern websites and practical
-      automation solutions. Based in Podujevë, Kosovo, I focus on clean architecture,
-      efficiency and long-term value for clients.
-    </p>
-  </div>
-</section>
-
-<section class="contact fade">
-  <div class="card">
-    <h3 id="contactTitle">Contact</h3>
-
-    <form action="https://formspree.io/f/xqeeanzo" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="contact-btn">Send Message</button>
-    </form>
-
-    <p style="margin-top:20px;color:var(--text-muted)">
-      Email: albion.gsh22@gmail.com<br>
-      Phone / WhatsApp: +383 43 521 250
-    </p>
-  </div>
-</section>
-
-<footer>
-  © 2026 AG Web Solutions · Albion Gashi
-</footer>
-
-<script src="js/main.js"></script>
-</body>
-</html>
+<header class="topbar"><div class="container nav"><a class="brand" href="#home" aria-label="AG Web Solutions home"><span class="brand-mark">AG</span><span class="brand-text">WEB SOLUTIONS</span></a><button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="main-navigation" aria-expanded="false">☰</button><nav id="main-navigation" class="nav-links" aria-label="Main navigation"><a class="active" href="#home" data-i18n="navHome">Home</a><a href="#about" data-i18n="navAbout">About</a><a href="#services" data-i18n="navServices">Services</a><a href="#projects" data-i18n="navProjects">Projects</a><a href="#process" data-i18n="navProcess">Process</a><a href="#contact" data-i18n="navContact">Contact</a></nav><div class="nav-actions"><button class="lang" id="langBtn" type="button" aria-label="Switch language">🇬🇧 EN <span>⌄</span></button><a href="#contact" class="btn btn-primary small" data-i18n="quote">Get a Quote <span aria-hidden="true">→</span></a></div></div></header>
+<main>
+<section class="hero" id="home"><div class="stars"></div><div class="mountain mountain-one"></div><div class="mountain mountain-two"></div><div class="container hero-grid"><div class="hero-copy reveal"><p class="eyebrow" data-i18n="heroEyebrow">IDEAS · CODE · REAL RESULTS</p><h1 data-i18n-html="heroTitle">Modern Websites<br>for a <em>Digital World</em></h1><p class="lead" data-i18n="heroDesc">We create modern, responsive and high-performance websites that help businesses grow, stand out and achieve real results.</p><div class="hero-buttons"><a class="btn btn-primary" href="#contact" data-i18n="start">Get Started <span aria-hidden="true">→</span></a><a class="btn btn-outline" href="#projects" data-i18n="work">▷ &nbsp; View Our Work</a></div></div><div class="hero-art reveal"><img src="assets/hero-devices.webp" width="800" height="440" alt="Premium dark website design presented on laptop and phone"><div class="hero-glow"></div></div></div></section>
+<section class="section services-section" id="services"><div class="container"><div class="section-head reveal"><p class="eyebrow" data-i18n="servicesEyebrow">OUR SERVICES</p><h2 data-i18n="servicesTitle">Everything You Need to Build and Grow Online</h2><p data-i18n="servicesDesc">From modern websites to powerful digital solutions, we turn ideas into real results.</p></div><div class="service-grid"><article class="service-card reveal"><div class="service-icon">▣</div><h3 data-i18n="service1">Website Development</h3><p data-i18n="service1Desc">Modern, responsive and high-performance websites tailored to your business.</p><a href="#contact" data-i18n="learn">Learn More →</a></article><article class="service-card reveal"><div class="service-icon">🛒</div><h3 data-i18n="service2">E-Commerce Solutions</h3><p data-i18n="service2Desc">Online stores designed to convert visitors into customers.</p><a href="#contact" data-i18n="learn">Learn More →</a></article><article class="service-card reveal"><div class="service-icon">⚙</div><h3 data-i18n="service3">Custom Web Applications</h3><p data-i18n="service3Desc">Powerful web solutions built for your specific needs and automation.</p><a href="#contact" data-i18n="learn">Learn More →</a></article><article class="service-card reveal"><div class="service-icon">♧</div><h3 data-i18n="service4">Game Development</h3><p data-i18n="service4Desc">Engaging game experiences built with creativity and performance.</p><a href="#contact" data-i18n="learn">Learn More →</a></article><article class="service-card reveal"><div class="service-icon">▥</div><h3 data-i18n="service5">Digital Consulting</h3><p data-i18n="service5Desc">Strategy, optimization and technical support to help your business grow.</p><a href="#contact" data-i18n="learn">Learn More →</a></article></div></div></section>
+<section class="section about-section" id="about"><div class="container about-grid"><div class="about-image reveal"><img src="assets/studio.webp" width="800" height="440" alt="Dark developer workstation with blue lighting" loading="lazy"><div class="image-tag">AG <span>WEB SOLUTIONS</span></div></div><div class="about-copy reveal"><p class="eyebrow" data-i18n="aboutEyebrow">ABOUT AG WEB SOLUTIONS</p><h2 data-i18n-html="aboutTitle">Passion for Code,<br>Focus on Results</h2><p data-i18n="aboutDesc">AG Web Solutions is an independent development studio focused on modern websites, web applications, game development and digital solutions. We combine creativity, technology and strategy to build purposeful experiences.</p><div class="about-points"><div><span class="point-icon">ϟ</span><p><strong data-i18n="feature1">Modern Solutions</strong><small data-i18n="feature1Desc">Built with the latest technologies</small></p></div><div><span class="point-icon">♙</span><p><strong data-i18n="feature2">Client Focused</strong><small data-i18n="feature2Desc">Your goals are our priority</small></p></div><div><span class="point-icon">⬡</span><p><strong data-i18n="feature3">Long-Term Support</strong><small data-i18n="feature3Desc">Reliable and friendly assistance</small></p></div></div><a href="#contact" class="btn btn-muted" data-i18n="more">More About Us →</a></div></div></section>
+<section class="section projects-section" id="projects"><div class="container"><div class="section-head reveal"><p class="eyebrow" data-i18n="projectsEyebrow">FEATURED PROJECTS</p><h2 data-i18n="projectsTitle">Some of Our Recent Work</h2><p data-i18n="projectsDesc">A selection of digital experiences and project concepts.</p></div><div class="project-grid"><article class="project-card reveal"><div class="project-cover skyduel-cover"><img src="assets/skyduel-official.webp" alt="SKYDUEL: Cold Steel Arena — official game artwork with the two fighters in the arena" width="1536" height="1024" loading="lazy"></div><div class="project-info"><h3>SKYDUEL <span>↗</span></h3><p>Cold Steel Arena <b>Roblox</b></p></div></article><article class="project-card reveal"><div class="project-cover"><img src="assets/project-business.webp" alt="Business website concept" loading="lazy"></div><div class="project-info"><h3 data-i18n="project2">Business Website Concept <span>↗</span></h3><p data-i18n="project2Sub">Design concept <b>Web Development</b></p></div></article><article class="project-card reveal"><div class="project-cover"><img src="assets/project-shop.webp" alt="E-commerce store concept" loading="lazy"></div><div class="project-info"><h3 data-i18n="project3">E-Commerce Concept <span>↗</span></h3><p data-i18n="project3Sub">Design concept <b>E-Commerce</b></p></div></article><article class="project-card reveal"><div class="project-cover"><img src="assets/project-app.webp" alt="Custom web application concept" loading="lazy"></div><div class="project-info"><h3 data-i18n="project4">Web Application Concept <span>↗</span></h3><p data-i18n="project4Sub">Design concept <b>Web Application</b></p></div></article></div><p class="project-note" data-i18n="projectNote">Concept previews are illustrative and are not presented as completed client projects.</p></div></section>
+<section class="section process-section" id="process"><div class="container"><div class="section-head reveal"><p class="eyebrow" data-i18n="processEyebrow">OUR PROCESS</p><h2 data-i18n="processTitle">From Idea to Launch</h2></div><div class="process-grid"><div class="process-step reveal"><span>01</span><h3 data-i18n="step1">Discover</h3><p data-i18n="step1Desc">Understand your goals and vision.</p></div><div class="process-step reveal"><span>02</span><h3 data-i18n="step2">Design</h3><p data-i18n="step2Desc">Craft a distinctive digital experience.</p></div><div class="process-step reveal"><span>03</span><h3 data-i18n="step3">Develop</h3><p data-i18n="step3Desc">Build, refine and test the solution.</p></div><div class="process-step reveal"><span>04</span><h3 data-i18n="step4">Launch</h3><p data-i18n="step4Desc">Publish and support your product.</p></div></div></div></section>
+<section class="section contact-section" id="contact"><div class="container contact-grid"><div class="reveal"><p class="eyebrow" data-i18n="contactEyebrow">LET'S WORK TOGETHER</p><h2 data-i18n-html="contactTitle">Let's Build Something<br><em>Exceptional.</em></h2><p data-i18n="contactDesc">Have a project in mind? Tell us what you need and let's bring it to life.</p><a href="mailto:albion.gsh22@gmail.com">albion.gsh22@gmail.com</a><p><a href="tel:+38343521250">+383 43 521 250</a></p></div><form class="contact-form reveal" action="https://formspree.io/f/xqeeanzo" method="POST"><label for="name" data-i18n="name">Your Name</label><input id="name" name="name" autocomplete="name" required placeholder="Name"><label for="email" data-i18n="email">Email Address</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><label for="message" data-i18n="message">Your Message</label><textarea id="message" name="message" required rows="5" placeholder="Tell us about your project..."></textarea><button class="btn btn-primary" type="submit" data-i18n="send">Send Message →</button></form></div></section>
+</main><footer><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark">AG</span><span class="brand-text">WEB SOLUTIONS</span></a><span>© <span id="year">2026</span> AG Web Solutions · Albion Gashi</span><a href="#home" data-i18n="top">Back to top ↑</a></div></footer><script src="js/main.js" defer></script></body></html>

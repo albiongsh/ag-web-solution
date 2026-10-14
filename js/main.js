@@ -1,37 +1,5 @@
-const items = document.querySelectorAll('.fade');
+const translations={sq:{navHome:'Ballina',navAbout:'Rreth nesh',navServices:'Shërbimet',navProjects:'Projektet',navProcess:'Procesi',navContact:'Kontakti',quote:'Kërko ofertë →',heroEyebrow:'IDE · KOD · REZULTATE REALE',heroTitle:'Webfaqe Moderne<br>për një <em>Botë Digjitale</em>',heroDesc:'Krijojmë webfaqe moderne, responsive dhe me performancë të lartë që i ndihmojnë bizneset të rriten dhe të dallohen.',start:'Fillo tani →',work:'▷ &nbsp; Shiko projektet',servicesEyebrow:'SHËRBIMET TONA',servicesTitle:'Gjithçka që të duhet për t’u zhvilluar online',servicesDesc:'Nga webfaqet moderne te zgjidhjet digjitale, idetë i kthejmë në rezultate.',service1:'Zhvillim Webfaqesh',service1Desc:'Webfaqe moderne, responsive dhe të shpejta për biznesin tënd.',service2:'Dyqane Online',service2Desc:'Dyqane online të dizajnuara për të kthyer vizitorët në klientë.',service3:'Aplikacione Web',service3Desc:'Zgjidhje web të përshtatura dhe automatizime sipas nevojave.',service4:'Zhvillim Lojërash',service4Desc:'Përvoja lojërash kreative dhe me performancë të mirë.',service5:'Konsulencë Digjitale',service5Desc:'Strategji, optimizim dhe mbështetje teknike për rritje.',learn:'Mëso më shumë →',aboutEyebrow:'RRETH AG WEB SOLUTIONS',aboutTitle:'Pasion për Kodin,<br>Fokus te Rezultatet',aboutDesc:'AG Web Solutions është studio e pavarur zhvillimi e fokusuar në webfaqe moderne, aplikacione web, zhvillim lojërash dhe zgjidhje digjitale. Kombinojmë kreativitetin, teknologjinë dhe strategjinë.',feature1:'Zgjidhje Moderne',feature1Desc:'Me teknologji bashkëkohore',feature2:'Fokus te Klienti',feature2Desc:'Qëllimet tuaja janë prioritet',feature3:'Mbështetje Afatgjatë',feature3Desc:'Ndihmë e besueshme',more:'Më shumë rreth nesh →',projectsEyebrow:'PROJEKTET E VEÇUARA',projectsTitle:'Disa nga Punët Tona',projectsDesc:'Një përzgjedhje projektesh dhe konceptesh digjitale.',project2:'Koncept Webfaqe Biznesi ↗',project2Sub:'Koncept dizajni · Zhvillim Web',project3:'Koncept Dyqani Online ↗',project3Sub:'Koncept dizajni · E-Commerce',project4:'Koncept Aplikacioni Web ↗',project4Sub:'Koncept dizajni · Aplikacion Web',projectNote:'Pamjet e koncepteve janë ilustruese dhe nuk paraqiten si projekte të përfunduara për klientë.',processEyebrow:'PROCESI YNË',processTitle:'Nga Ideja te Publikimi',step1:'Zbulimi',step1Desc:'Kuptojmë qëllimet dhe vizionin.',step2:'Dizajni',step2Desc:'Krijojmë një përvojë unike.',step3:'Zhvillimi',step3Desc:'Ndërtojmë dhe testojmë zgjidhjen.',step4:'Publikimi',step4Desc:'Publikojmë dhe mbështesim produktin.',contactEyebrow:'TË PUNOJMË SË BASHKU',contactTitle:'Të Ndërtojmë Diçka<br><em>të Veçantë.</em>',contactDesc:'Ke një projekt në mendje? Na trego çfarë të duhet.',name:'Emri yt',email:'Adresa e emailit',message:'Mesazhi yt',send:'Dërgo mesazhin →',top:'Kthehu lart ↑'}};
+let language='en';const original=new Map();document.querySelectorAll('[data-i18n],[data-i18n-html]').forEach(el=>original.set(el,el.innerHTML));function setLanguage(lang){language=lang;document.documentElement.lang=lang;document.querySelectorAll('[data-i18n],[data-i18n-html]').forEach(el=>{const key=el.dataset.i18n||el.dataset.i18nHtml;if(lang==='sq'&&translations.sq[key]){if(el.dataset.i18nHtml)el.innerHTML=translations.sq[key];else el.textContent=translations.sq[key]}else el.innerHTML=original.get(el)});document.getElementById('langBtn').innerHTML=lang==='en'?'🇬🇧 EN <span>⌄</span>':'🇦🇱 SQ <span>⌄</span>'}document.getElementById('langBtn').addEventListener('click',()=>setLanguage(language==='en'?'sq':'en'));const menu=document.querySelector('.nav-links'),toggle=document.querySelector('.menu-toggle');toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();if('IntersectionObserver'in window){const obs=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}})},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))}else document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-items.forEach(item => observer.observe(item));
-
-function setLang(lang){
-  if(lang === 'sq'){
-    subtitle.innerText = "Zgjidhje premium për web & automatizim";
-    desc.innerText = "Webfaqe profesionale dhe zgjidhje të zgjuara automatizimi për biznese moderne.";
-
-    servicesTitle.innerText = "Shërbimet";
-    s1t.innerText = "Webfaqe për Biznese";
-    s1d.innerText = "Webfaqe premium për besueshmëri dhe rritje.";
-    s2t.innerText = "Webfaqe Personale & Portfolio";
-    s2d.innerText = "Brendim personal minimal dhe profesional.";
-    s3t.innerText = "Mirëmbajtje Website";
-    s3d.innerText = "Siguri, përditësime dhe mbështetje afatgjate.";
-    s4t.innerText = "Automatizime me Python";
-    s4d.innerText = "Zgjidhje të zgjuara për eliminimin e punëve të përsëritura.";
-    s5t.innerText = "Landing Pages";
-    s5d.innerText = "Faqe marketingu të fokusuara në konvertim.";
-
-    aboutTitle.innerText = "Rreth Meje";
-    aboutText.innerText = "Unë jam Albion Gashi, zhvillues web i specializuar në webfaqe moderne dhe automatizime praktike. Me bazë në Podujevë, fokusimi im është cilësia, efikasiteti dhe vlera afatgjate.";
-
-    contactTitle.innerText = "Kontakt";
-  } else {
-    location.reload();
-  }
-}
+// Keyboard-friendly mobile navigation and escape-to-close behavior.
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.classList.contains('open')){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰';toggle.focus()}});
